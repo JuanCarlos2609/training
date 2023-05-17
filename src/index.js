@@ -4,11 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { LoaderProvider } from './components/Loader/LoaderProvider';
+
+// import './components/useReducer/intro-reducer';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <>
+    <LoaderProvider>
+      <App />
+    </LoaderProvider>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
